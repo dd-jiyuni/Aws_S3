@@ -1,0 +1,25 @@
+cloud:
+  aws:
+    s3:
+      bucket: awss3testbucket2
+    credentials:
+      access-key: ${AWS_ACCESS_KEY}
+      secret-key: ${AWS_SECRET_KEY}
+    region:
+      static: ap-northeast-2
+      auto: false
+    stack:
+      auto: false
+
+
+spring:
+  datasource:
+    url: ${DB_JDBC_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+servlet:
+  multipart:
+    max-file-size: 100MB
+    max-request-size: 100MB
